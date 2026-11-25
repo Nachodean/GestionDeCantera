@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pizarra Táctica</string>
+    <string name="nav_abrir">Abrir menú</string>
+    <string name="nav_cerrar">Cerrar menú</string>
+</resources>

@@ -1,0 +1,29 @@
+# Gradle / compilacion
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# Configuracion local (rutas del SDK, JDK, etc.)
+local.properties
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.kotlin/
+
+# Firebase: cada desarrollador usa su propio archivo
+# (ver app/google-services.json.example)
+google-services.json
+
+# Firma de la app: nunca subir keystores
+*.jks
+*.keystore
+keystore.properties
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

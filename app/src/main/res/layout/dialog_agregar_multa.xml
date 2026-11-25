@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecciona el jugador:"
+        android:textSize="12sp"
+        android:textColor="#666666" />
+
+    <Spinner
+        android:id="@+id/sp_jugador_multa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de infracción (según código interno):"
+        android:textSize="12sp"
+        android:textColor="#666666" />
+
+    <Spinner
+        android:id="@+id/sp_tipo_multa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/et_fecha_multa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha (dd/mm/aaaa)"
+        android:inputType="date"
+        android:layout_marginBottom="16dp"
+        android:importantForAutofill="no" />
+
+    <CheckBox
+        android:id="@+id/cb_pagado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="El jugador ya ha pagado esta multa al bote"
+        android:textColor="#2E7D32"
+        android:textStyle="bold" />
+
+</LinearLayout>

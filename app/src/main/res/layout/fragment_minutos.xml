@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\u23F1 Minutos de partido"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <EditText
+            android:id="@+id/et_jornada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Jornada"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/et_rival"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Rival"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:importantForAutofill="no" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_fecha_partido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha (dd/mm/aaaa)"
+        android:inputType="date"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"
+        android:importantForAutofill="no" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_minutos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_guardar_minutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Jornada"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
+</LinearLayout>

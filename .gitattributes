@@ -1,0 +1,11 @@
+# Saltos de linea coherentes en todos los sistemas
+* text=auto eol=lf
+
+# Scripts de Windows con CRLF
+*.bat text eol=crlf
+
+# Binarios
+*.jpg binary
+*.png binary
+*.jar binary
+*.webp binary

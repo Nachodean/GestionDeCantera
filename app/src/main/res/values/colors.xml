@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde_campo">#2E7D32</color>
+    <color name="verde_oscuro">#1B5E20</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="fondo_actividad">#FFFFFF</color>
+
+    <!-- Editor de sesiones -->
+    <color name="editor_fondo">#263238</color>
+    <color name="editor_barra">#37474F</color>
+    <color name="editor_panel">#ECEFF1</color>
+    <color name="editor_tira">#CFD8DC</color>
+    <color name="editor_acento">#FFD600</color>
+    <color name="texto_secundario">#607D8B</color>
+</resources>

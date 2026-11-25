@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Editor de sesiones (movil) -->
+    <dimen name="ancho_paleta">164dp</dimen>
+    <dimen name="alto_tira_ejercicios">92dp</dimen>
+    <integer name="columnas_paleta">2</integer>
+    <dimen name="ancho_tira_vertical">116dp</dimen>
+</resources>

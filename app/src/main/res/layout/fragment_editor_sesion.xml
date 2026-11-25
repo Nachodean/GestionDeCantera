@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/editor_fondo"
+    android:orientation="vertical">
+
+    <!-- ── Datos de la sesion ───────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/verde_oscuro"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="2dp"
+        android:paddingEnd="4dp">
+
+        <!-- Volver a la lista de sesiones (guarda antes de salir) -->
+        <ImageButton
+            android:id="@+id/btn_volver"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver a mis sesiones"
+            android:src="@drawable/ic_volver" />
+
+        <EditText
+            android:id="@+id/et_numero"
+            style="@style/CampoBarra"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:hint="Nº"
+            android:imeOptions="flagNoExtractUi"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLength="8" />
+
+        <EditText
+            android:id="@+id/et_fecha"
+            style="@style/CampoBarra"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="Fecha"
+            android:imeOptions="flagNoExtractUi"
+            android:importantForAutofill="no"
+            android:inputType="none" />
+
+        <EditText
+            android:id="@+id/et_objetivo"
+            style="@style/CampoBarra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:hint="Objetivo de la sesión"
+            android:imeOptions="flagNoExtractUi"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences" />
+
+        <TextView
+            android:id="@+id/tv_duracion_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#C8E6C9"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pdf"
+            style="@style/BotonBarra"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="PDF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_guardar"
+            style="@style/BotonBarra"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="Guardar"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ── Herramientas ─────────────────────────────────────────── -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/editor_barra"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/grupo_herramientas"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                app:selectionRequired="true"
+                app:singleSelection="true"
+                app:checkedButton="@id/btn_mover">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_mover"
+                    style="@style/BotonHerramienta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="✋ Mover" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_pase"
+                    style="@style/BotonHerramienta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="➝ Pase" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_sin_balon"
+                    style="@style/BotonHerramienta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="⇢ Sin balón" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_conduccion"
+                    style="@style/BotonHerramienta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="〰 Conducción" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_linea"
+                    style="@style/BotonHerramienta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="— Línea" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_medida"
+                    style="@style/BotonHerramienta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="↔ Medida" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_libre"
+                    style="@style/BotonHerramienta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="✎ Libre" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <View
+                android:id="@+id/vista_color_trazo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="Color de las flechas" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_deshacer"
+                style="@style/BotonBarra"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="↶ Deshacer" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_rehacer"
+                style="@style/BotonBarra"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="↷ Rehacer" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_campo"
+                style="@style/BotonBarra"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="▭ Campo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_imagen"
+                style="@style/BotonBarra"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="🖼 Imagen" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_limpiar"
+                style="@style/BotonBarra"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="🗑 Limpiar"
+                android:textColor="#FF8A80" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- ── Paleta + pizarra ─────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/fila_central"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/ancho_paleta"
+            android:layout_height="match_parent"
+            android:background="@color/editor_panel"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CFD8DC"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:text="Toca para añadir · mantén pulsado y arrastra al campo"
+                android:textColor="@color/texto_secundario"
+                android:textSize="11sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_paleta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="12dp" />
+        </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.entrenador.pizarratactica.view.pizarra.PizarraView
+                    android:id="@+id/pizarra"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Titulo, minutos y explicacion del ejercicio (tocar para editar) -->
+                <TextView
+                    android:id="@+id/tv_info_ejercicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/fondo_barra_seleccion"
+                    android:drawablePadding="6dp"
+                    android:ellipsize="end"
+                    android:maxWidth="320dp"
+                    android:minHeight="36dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Acciones sobre el objeto o flecha seleccionado -->
+                <HorizontalScrollView
+                    android:id="@+id/barra_seleccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/fondo_barra_seleccion"
+                    android:elevation="6dp"
+                    android:scrollbars="none"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp">
+
+                        <TextView
+                            android:id="@+id/tv_seleccion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="4dp"
+                            android:maxWidth="140dp"
+                            android:singleLine="true"
+                            android:textColor="@color/editor_acento"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_girar_izq"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Girar a la izquierda"
+                            android:text="↺" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_girar_der"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Girar a la derecha"
+                            android:text="↻" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_menos"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Más pequeño"
+                            android:text="−" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_mas"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Más grande"
+                            android:text="+" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_color"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="🎨 Color" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_editar"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="✏ Editar" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_duplicar"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="⧉ Duplicar" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_eliminar"
+                            style="@style/BotonBarra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="✕ Borrar"
+                            android:textColor="#FF8A80" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </FrameLayout>
+    </LinearLayout>
+
+    <!-- ── Ejercicios de la sesion ─────────────────────────────── -->
+    <!-- En horizontal el fragmento la mueve a la derecha de la pizarra. -->
+    <LinearLayout
+        android:id="@+id/contenedor_tira"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_tira_ejercicios"
+        android:background="@color/editor_tira"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ejercicios"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_nuevo_ejercicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="+ Ejercicio"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

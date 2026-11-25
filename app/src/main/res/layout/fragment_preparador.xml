@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuerza y Rehabilitacion Tren Inferior"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#388E3C"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicios para fortalecer piernas, prevencion y readaptacion."
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fuerza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Velocidad, Agilidad y Reactividad"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arranques, cambios de direccion, escaleras de agilidad."
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_velocidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resistencia Anaerobica / Acondicionamiento"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capacidad de repetir esfuerzos de alta intensidad con balon y sin balon."
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_resistencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prevencion de Lesiones y Core"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#F57C00"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trabajo isometrico, faja abdominal y estabilizacion."
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_core"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\u2B50 Evaluaci\u00f3n de entrenamiento"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/et_fecha_eval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha del entrenamiento"
+        android:inputType="date"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"
+        android:importantForAutofill="no" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_evaluaciones"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_guardar_evaluaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Evaluaciones"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
+</LinearLayout>

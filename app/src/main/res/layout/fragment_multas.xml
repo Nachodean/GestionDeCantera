@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#f5f5f5"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/tv_total_bote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bote Recaudado: 0.00 €"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32" />
+
+            <TextView
+                android:id="@+id/tv_total_pendiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pendiente de pago: 0.00 €"
+                android:textSize="14sp"
+                android:textColor="#D32F2F"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_multas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:clipToPadding="false" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_agregar_multa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="Añadir sanción"
+        app:backgroundTint="@color/verde_campo" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
